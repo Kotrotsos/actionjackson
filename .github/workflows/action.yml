@@ -14,5 +14,6 @@ jobs:
           NETLIFY_SITE_ID: 903917ed-51d2-400c-912e-36de5fef09d8
           NETLIFY_DEPLOY_MESSAGE: deploying to netlify
           build_command: npm run build
+          build_directory: dist
       - run: npm install
       - run: npm run build
