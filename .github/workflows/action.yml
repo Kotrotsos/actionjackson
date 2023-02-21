@@ -7,7 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
+          NETLIFY_AUTH_TOKEN: 2IOsDMNoeoAxctMKcD5la-_aipQTZd6eAvE3N20IdQY
+          NETLIFY_DEPLOY_TO_PROD: true
+          NETLIFY_SITE_ID: 903917ed-51d2-400c-912e-36de5fef09d8
+          NETLIFY_DEPLOY_MESSAGE: deploying to netlify
+          build_command: npm run build
           node-version: '14'
       - run: npm install
       - run: npm run build
