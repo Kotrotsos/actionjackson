@@ -1,19 +1,18 @@
 {
-  "name": "actionjackson",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "aj",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kotrotsos/actionjackson.git"
+  "dependencies": {
+    "vue": "^3.2.45"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kotrotsos/actionjackson/issues"
-  },
-  "homepage": "https://github.com/Kotrotsos/actionjackson#readme"
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.0"
+  }
 }
