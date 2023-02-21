@@ -14,6 +14,5 @@ jobs:
           NETLIFY_SITE_ID: 903917ed-51d2-400c-912e-36de5fef09d8
           NETLIFY_DEPLOY_MESSAGE: deploying to netlify
           build_command: npm run build
-          node-version: '14'
       - run: npm install
       - run: npm run build
