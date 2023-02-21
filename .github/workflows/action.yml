@@ -1,0 +1,21 @@
+name: actionsjacksons
+run-name: ${{ github.actor }} says go
+on:   
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_ID }}
+          NETLIFY_DEPLOY_MESSAGE: deploying to netlify
+          build_command: npm run build
+          build_directory: dist
+      - run: npm install
+      - run: npm run build
